@@ -1,0 +1,13 @@
+Isolate and verify each layer. Do not write a single line of Node.js until the Python engine works via curl. Do not touch React until every Node.js endpoint works via curl.
+
+Freeze the JSON contract. Once engine/ returns a clean JSON object, treat that shape as law. Everything above it depends on it.
+
+Ugly and working beats pretty and broken. Especially in React—wire up the data flow and buttons first; spend the last 20 minutes on basic CSS.
+
+Your exact build order:
+
+engine/ (Python) — Zero database, zero UI. Just receive a request, fire concurrent HTTP calls, crunch the numbers, and return JSON.
+
+api/ (Node.js + MongoDB) — Build targets CRUD first, then wire up the HTTP call to engine/ and save runs, then build the /compare math.
+
+client/ (React) — Build a thin UI that talks to api/.
