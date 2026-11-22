@@ -3,4 +3,4 @@ node_modules/
 dist/
 tasks.md
 task-verbose.md
-BUILD-ORDER.md
+BUILD_ORDER.md
