@@ -1,4 +1,6 @@
 node_modules/
 .env
 dist/
-
+tasks.md
+task-verbose.md
+BUILD-ORDER.md
